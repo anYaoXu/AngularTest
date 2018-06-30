@@ -3,7 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {SassAComponent} from './sass/sassA/sassA.component';
 import {SassFunctionComponent} from './sass/sassB/sassFunction.component';
 import {SassHomeComponent} from './sass/sassHome.component';
-
+import {EchartsComponent} from './echarts/echarts.component';
 
 const routes: Routes = [
   {
@@ -16,6 +16,9 @@ const routes: Routes = [
         path: 'sassFunction', component: SassFunctionComponent
       }
     ]
+  },
+  {
+    path: 'echarts', component: EchartsComponent
   }
 ];
 

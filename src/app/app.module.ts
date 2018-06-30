@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
+import {HttpModule} from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { HomeModule } from './sass/sassHome.module';
+import { SassHomeModule } from './sass/sassHome.module';
+import { EchartsModule} from './echarts/echarts.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,9 @@ import { HomeModule } from './sass/sassHome.module';
   ],
   imports: [
     BrowserModule,
-    HomeModule,
+    HttpModule,
+    SassHomeModule,
+    EchartsModule,
     RouterModule,
     AppRoutingModule
   ],

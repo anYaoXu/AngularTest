@@ -35,4 +35,4 @@ export const sassRoutes: Routes = [
     SassFunctionComponent
   ],
 })
-export class HomeModule { }
+export class SassHomeModule { }
