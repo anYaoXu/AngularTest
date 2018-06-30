@@ -52,7 +52,7 @@ export class EchartsComponent implements OnInit {
         series: [
           {
             type: 'custom',
-            // type: 'scatter',   //原点
+            // type: 'scatter',   //圆点
             coordinateSystem: 'geo',
             renderItem: function (params, api) {
               return {
@@ -78,6 +78,7 @@ export class EchartsComponent implements OnInit {
             data: _data,
             tooltip: {
               trigger: 'item',
+              position: ['50%', '50%'],
               formatter: function (params) {
                 return params.name + ' : ' + params.value[2];
               }

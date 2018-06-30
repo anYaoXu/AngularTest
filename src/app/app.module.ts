@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SassHomeModule } from './sass/sassHome.module';
 import { EchartsModule} from './echarts/echarts.module';
+import { NgxBootstrapModule} from './ngxBootstrap/ngxBootstrap.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EchartsModule} from './echarts/echarts.module';
     SassHomeModule,
     EchartsModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]
