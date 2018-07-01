@@ -16,7 +16,6 @@ export class NgxBootstrapComponent implements OnInit {
   constructor(public http: Http) {
     this.onPageChange({page: this.currentPage, itemsPerPage: this.itemsPerPage});
   }
-
   ngOnInit() {
   }
 

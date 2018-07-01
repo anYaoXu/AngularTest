@@ -5,6 +5,7 @@ import {SassFunctionComponent} from './sass/sassB/sassFunction.component';
 import {SassHomeComponent} from './sass/sassHome.component';
 import {EchartsComponent} from './echarts/echarts.component';
 import {NgxBootstrapComponent} from './ngxBootstrap/ngxBootstrap.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,9 @@ const routes: Routes = [
   },
   {
     path: 'ngxBootstrap', component: NgxBootstrapComponent
+  },
+  {
+    path: 'test', component: TestComponent
   }
 ];
 

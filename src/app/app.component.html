@@ -1,9 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1>
-  {{title}}
-  <a [routerLink]="['/echarts']">echarts</a>
-  <a [routerLink]="['/sassHome']">sass</a>
-  <!--<a [routerLink]="['/hCharts']">hCharts</a>-->
-  <a [routerLink]="['/ngxBootstrap']">ngxBootstrap</a>
-</h1>
-<router-outlet></router-outlet>
+<div class="nav">
+    <h1> 
+        {{title}}
+        <a [routerLink]="['/echarts']">echarts</a> 
+        <a [routerLink]="['/sassHome']">sass</a>
+        <a [routerLink]="['/test']">test</a>
+        <a [routerLink]="['/ngxBootstrap']">ngxBootstrap</a>
+      </h1>
+      <router-outlet></router-outlet>
+</div>
+
