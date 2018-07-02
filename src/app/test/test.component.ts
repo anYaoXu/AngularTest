@@ -5,18 +5,22 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './test.component.html'
 })
 export class TestComponent implements OnInit {
-  pi: number = 3.14;
-  e: number = 2.718281828459045;
+  pi = 3.14;
+  e = 2.718281828459045;
   date = new Date();
-  date1 = 1530450710
+  date1 = '2018-05-07 11:04:33';
+  date2 = new Date(parseInt('1530501260', 10) * 1000);  //10位数需要乘以 1000
+  date3 = 1530501260;
+
   constructor() {
-   
+
   }
 
   ngOnInit() {
-    
+
+    console.log(this.date2);
 
   }
 
-  
+
 }
