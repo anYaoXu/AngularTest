@@ -5,13 +5,7 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './test.component.html'
 })
 export class TestComponent implements OnInit {
-  //管道
-  pi = 3.14;
-  e = 2.718281828459045;
-  date = new Date();
-  date1 = '2018-05-07 11:04:33';
-  date2 = new Date(parseInt('1530501260', 10) * 1000);  //10位数需要乘以 1000
-  date3 = 1530501260;
+
   //js 分组方法
   list = [
     {"name": "John", "Average": 15, "High": 10, "DtmStamp": 1358226000000},
@@ -23,7 +17,9 @@ export class TestComponent implements OnInit {
     {"name": "John", "Average": 17, "High": 45, "DtmStamp": 1358226060000},
     {"name": "Jane", "Average": 18, "High": 92, "DtmStamp": 1358226060000}
   ];
+
   public groupByList;
+
   constructor() {
 
   }
@@ -43,9 +39,15 @@ export class TestComponent implements OnInit {
       groups[group] = groups[group] || [];  //没有push过是undefind  push过后将之前信息取出来
       groups[group].push(o);
     });
+    const a = [];
     console.log(groups);   //此数组中 是 分组后的list 前面带有key
     //Object.keys(groups)是取出groups对象中的所有key，然后遍历一个个key组成的新数组
     return Object.keys(groups).map(function (group) {
+      a.push({
+        name: group,
+        list: groups[group]
+      });
+      console.log(a);
       return groups[group];
     });
   }

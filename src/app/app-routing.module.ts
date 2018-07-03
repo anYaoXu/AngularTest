@@ -6,6 +6,8 @@ import {SassHomeComponent} from './sass/sassHome.component';
 import {EchartsComponent} from './echarts/echarts.component';
 import {NgxBootstrapComponent} from './ngxBootstrap/ngxBootstrap.component';
 import { TestComponent } from './test/test.component';
+import {AngularComponent} from "./angular/angular.component";
+import {AngularPipeComponent} from "./angular/angular-pipe/angular-pipe.component";
 
 const routes: Routes = [
   {
@@ -27,6 +29,14 @@ const routes: Routes = [
   },
   {
     path: 'test', component: TestComponent
+  },
+  {
+    path: 'angular', component: AngularComponent,
+    children: [
+      {
+        path: 'pipe', component: AngularPipeComponent
+      },
+    ]
   }
 ];
 

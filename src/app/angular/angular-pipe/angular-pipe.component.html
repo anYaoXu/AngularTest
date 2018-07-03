@@ -1,0 +1,23 @@
+<h2>angular 管道</h2>
+
+<div>{{e}}</div>
+
+<div>{{e | number}}</div>
+
+<div>{{e | number:'5.2-5'}}</div>
+
+<div>{{e | percent}}</div>  <!--转换成百分比-->
+
+<div>{{jsonData | json}}</div>
+
+<div>{{sliceStr | slice:2:sliceStr.length}}</div>  <!--处理字符串-->
+
+<div>{{date | date:'yyyy-MM-dd'}}</div>
+
+<div>{{date1 | date:'yyyy年MM月dd日星期EEEE'}}</div>
+
+<div>{{date1 | date:'yy年M月d日'}}</div>
+
+<div>{{date2 | date:'yyyy年MM月dd日'}}</div>
+
+<div>{{date3*1000 | date:'yyyy年MM月dd日'}}</div>
