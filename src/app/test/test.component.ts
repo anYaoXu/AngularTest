@@ -49,6 +49,4 @@ export class TestComponent implements OnInit {
       return groups[group];
     });
   }
-
-
 }
