@@ -19,6 +19,8 @@ export class TestComponent implements OnInit {
   ];
 
   public groupByList;
+  
+  public mytitle = "title信息"
 
   constructor() {
 
@@ -31,7 +33,7 @@ export class TestComponent implements OnInit {
     console.log(this.groupByList);
   }
 
-  groupBy(array, f) {
+  private groupBy(array, f) {
     console.log(f);
     const groups = {};
     array.forEach(function (o) {
@@ -50,5 +52,8 @@ export class TestComponent implements OnInit {
       console.log(a);
       return groups[group];
     });
+  }
+  public filterClick(data){
+    console.log(data);
   }
 }
