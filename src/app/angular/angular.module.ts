@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {AngularComponent} from './angular.component';
 import {AngularPipeComponent} from './angular-pipe/angular-pipe.component';
+import { FPipePipe } from '../pipe/f-pipe.pipe';
+
 
 
 
@@ -27,7 +29,8 @@ export const angularRoutes: Routes = [
   ],
   declarations: [
     AngularComponent,
-    AngularPipeComponent
+    AngularPipeComponent,
+    FPipePipe
   ],
 })
 export class AngularaOwnModule { }
