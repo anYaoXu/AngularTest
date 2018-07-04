@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { SassHomeModule } from './sass/sassHome.module';
 import { EchartsModule} from './echarts/echarts.module';
 import { NgxBootstrapModule} from './ngxBootstrap/ngxBootstrap.module';
-import { TestMoudle} from './test/test.module';
+import { TestModule} from './test/test.module';
 import { AngularaOwnModule} from './angular/angular.module';
 
 @NgModule({
@@ -22,7 +22,7 @@ import { AngularaOwnModule} from './angular/angular.module';
     RouterModule,
     AppRoutingModule,
     NgxBootstrapModule,
-    TestMoudle,
+    TestModule,
     AngularaOwnModule
   ],
   providers: [],

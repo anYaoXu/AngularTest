@@ -8,5 +8,7 @@
     </li>
   </ul>
 </div>
-<app-global-filter [value]="mytitle" (btnEmit)="filterClick($event)"></app-global-filter>   
+<app-global-filter [value]="mytitle" (btnEmit)="filterClick($event)" #globalFilter [obj]="myObj"></app-global-filter>
+
+<input type="button" value="改变父级传值" (click)="parentDataChange()">
 

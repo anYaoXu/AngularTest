@@ -11,6 +11,6 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
   ],
-  declarations: [TestComponent,GlobalFilterComponent],
+  declarations: [TestComponent, GlobalFilterComponent],
 })
-export class TestMoudle { }
+export class TestModule { }
