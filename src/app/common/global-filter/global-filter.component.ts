@@ -1,4 +1,15 @@
-import {Component, OnInit, Input, Output, EventEmitter, OnChanges, DoCheck, SimpleChange} from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  OnChanges,
+  DoCheck,
+  SimpleChange,
+  ElementRef,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-global-filter',
@@ -11,8 +22,8 @@ export class GlobalFilterComponent implements OnInit, OnChanges, DoCheck {
   @Output() btnEmit = new EventEmitter();
   @Input() public obj;
   public sv = '123';
-
-  constructor() {
+  @ViewChild('searchBox') searchDiv: ElementRef;
+  constructor(private el: ElementRef) {
   }
 
   ngOnInit() {
@@ -24,7 +35,6 @@ export class GlobalFilterComponent implements OnInit, OnChanges, DoCheck {
   输入属性以前说过，使用@Input装饰的属性，这里还需要注意不可变对象，在Angular中，典型的不可变对象是string类型，
   但所有自定义对象均为可变对象，如：user:{name:string}，可变对象即使被定义为输入属性，也不会触发OnChanges方法。*/
   ngOnChanges(changes: { [propertyName: string]: SimpleChange }) {
-    debugger;
     if (!changes['obj']) {
       return;
     } else {
@@ -41,6 +51,10 @@ export class GlobalFilterComponent implements OnInit, OnChanges, DoCheck {
 
   public btnClick() {
     this.sv = '231';  // 不会出发检查机制
+    const element = this.el.nativeElement.querySelector("#searchBox");
+    console.log(element);   // element 对象
+    console.log(this.searchDiv); // elemetRef对象
+    console.log(this.searchDiv.nativeElement);  // element对象
     this.btnEmit.emit(this.value);
   }
 
@@ -48,3 +62,4 @@ export class GlobalFilterComponent implements OnInit, OnChanges, DoCheck {
     alert('提供给父组件主动调用的方法');
   }
 }
+
