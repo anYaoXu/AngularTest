@@ -8,7 +8,63 @@
     </li>
   </ul>
 </div>
-<app-global-filter [value]="mytitle" (btnEmit)="filterClick($event)" #globalFilter [obj]="myObj"></app-global-filter>
+<!--<app-global-filter [value]="mytitle" (btnEmit)="filterClick($event)" #globalFilter [obj]="myObj"></app-global-filter>-->
 
 <input type="button" value="改变父级传值" (click)="parentDataChange()">
 
+<button (click)="switchOpen()">全部展开</button>{{isFirstChildrenShow}}
+
+<div id="wrap">
+  <div class="group first" [ngClass]="isFirstChildrenShow?'icon-down':'icon-right'">
+    <div class="parent"></div>
+    <div class="children" style="border: none" *ngIf="isFirstChildrenShow">
+      <div class="group first" [ngClass]="isFirstChildrenShow?'icon-down':'icon-right'">
+        <div class="parent"></div>
+        <div class="children" style="border: none" *ngIf="isFirstChildrenShow">
+          <div class="group first" [ngClass]="isFirstChildrenShow?'icon-down':'icon-right'">
+            <div class="parent"></div>
+            <div class="children"></div>
+            <div class="children"></div>
+          </div>
+          <div class="group center">
+            <div class="parent"></div>
+            <div class="children"></div>
+            <div class="children"></div>
+          </div>
+          <div class="group last">
+            <div class="parent"></div>
+            <div class="children"></div>
+            <div class="children"></div>
+          </div>
+        </div>
+        <div class="children"></div>
+      </div>
+      <div class="group center">
+        <div class="parent"></div>
+        <div class="children"></div>
+        <div class="children"></div>
+      </div>
+      <div class="group center">
+        <div class="parent"></div>
+        <div class="children"></div>
+        <div class="children"></div>
+      </div>
+      <div class="group last">
+        <div class="parent"></div>
+        <div class="children"></div>
+        <div class="children"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="group center">
+    <div class="parent"></div>
+    <div class="children" *ngIf="isFirstChildrenShow"></div>
+    <div class="children" *ngIf="isFirstChildrenShow"></div>
+  </div>
+
+  <div class="group last">
+    <div class="parent"></div>
+    <div class="children" *ngIf="isFirstChildrenShow"></div>
+  </div>
+</div>

@@ -2,7 +2,8 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-test',
-  templateUrl: './test.component.html'
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
   @ViewChild('globalFilter') public childFilter: any;
@@ -21,6 +22,8 @@ export class TestComponent implements OnInit {
   public groupByList;
 
   public mytitle = "title信息";
+
+  public isFirstChildrenShow = false;
 
   public myObj = {
     a: '1',
@@ -71,5 +74,9 @@ export class TestComponent implements OnInit {
       a: '2',
       b: '3'
     };
+  }
+
+  public switchOpen() {
+    this.isFirstChildrenShow = !this.isFirstChildrenShow;
   }
 }

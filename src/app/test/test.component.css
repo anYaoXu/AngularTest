@@ -1,0 +1,66 @@
+#wrap{
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid red;
+  padding-left: 50px;
+}
+.group>div{
+  width: 200px;
+  min-height: 100px;
+  /*background-color: cadetblue;*/
+  border: 1px solid cadetblue;
+}
+.children{
+  margin-left: 20px;
+}
+.group{
+  padding-left: 10px;
+  position: relative;
+  padding-top: 20px;
+}
+.first::before{
+  content: '';
+  width: 10px;
+  height: calc(100% - 50px - 20px);
+  border-left: 1px solid green;
+  border-top: 1px solid green;
+  position: absolute;
+  left: 0;
+  top: 70px;
+}
+.center::before{
+  content: '';
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-left: 1px solid green;
+}
+.center::after{
+  content: '';
+  width: 10px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  border-top: 1px solid green;
+}
+.last::before{
+  content:'';
+  width: 10px;
+  height: 70px;
+  border-left: 1px solid green;
+  border-bottom: 1px solid green;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.icon-down{
+  background: url("../../images/icons/RightArrow.png") no-repeat 0 60px;
+  background-size: 10px;
+}
+.icon-right{
+  background: url("../../images/icons/RightArrow.png") no-repeat 0 60px;
+  background-size: 10px;
+}
