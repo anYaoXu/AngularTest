@@ -24,4 +24,8 @@
 
 <div>{{date3*1000 | date:'yyyy年MM月dd日'}}</div>
 
-<div>自定义管道：{{size | fPipe: 5}}</div>
+<div [style.background-color]="color">自定义管道：{{size | fPipe: 5}}</div>
+
+<div [ngStyle]="{'backgroundColor':'green'}">对 e 四舍五入保留两位小数：{{tofixedValue}}</div>
+
+

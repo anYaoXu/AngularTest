@@ -15,6 +15,8 @@ export class AngularPipeComponent implements OnInit {
   date1 = '2018-05-07 11:04:33';
   date2 = new Date(parseInt('1530501260', 10) * 1000);  // 10位数需要乘以 1000
   date3 = 1530501260;
+  public tofixedValue;
+  public color='red';
   jsonData = {
     name: '转换成json管道',
     remark: '转换'
@@ -25,6 +27,8 @@ export class AngularPipeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.tofixedValue = this.e.toFixed(2);
+
   }
 
 }
