@@ -29,29 +29,20 @@ export class AngularPipeComponent implements OnInit {
   ngOnInit() {
     this.tofixedValue = this.e.toFixed(2);
 
-    const sa = 'aaaaaaa';
-
     const oa = {
       a: '1',
       b: '2'
     };
 
     const ob = JSON.parse(JSON.stringify(oa));   //可以用来   深度 copy
-    let sb = sa;
-
-
-    sb = 'bbbbbb';
 
     const oc = oa;
     ob.a = '3';
+    console.log('改变b之后的oa：' + JSON.stringify(oa));
     oc.a = '4';       //c 改变  a 也改变
+    console.log('改变c之后的oa：' + JSON.stringify(oa));
 
-    console.log(oa);  //
-    console.log(ob);  //
-    console.log(oc);
 
-    console.log(sa);
-    console.log(sb);
 
   }
 
