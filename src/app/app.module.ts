@@ -4,11 +4,9 @@ import {HttpModule} from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { SassHomeModule } from './sass/sassHome.module';
 import { EchartsModule} from './echarts/echarts.module';
 import { NgxBootstrapModule} from './ngxBootstrap/ngxBootstrap.module';
 import { TestModule} from './test/test.module';
-import { AngularaOwnModule} from './angular/angular.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +15,12 @@ import { AngularaOwnModule} from './angular/angular.module';
   imports: [
     BrowserModule,
     HttpModule,
-    SassHomeModule,
     EchartsModule,
     RouterModule,
     AppRoutingModule,
     NgxBootstrapModule,
     TestModule,
-    AngularaOwnModule
+    // AngularaOwnModule
   ],
   providers: [],
   bootstrap: [AppComponent]

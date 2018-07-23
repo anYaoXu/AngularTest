@@ -1,0 +1,18 @@
+
+
+
+<div [ngClass]="{'c-first': classSwitch, 'c-second': !classSwitch, 'bxg': 1===1}">
+  多个条件对多个样式类{{classSwitch}}
+</div>
+
+<br>
+
+<div [ngClass]="classSwitch? 'c-first': 'c-second'">
+  一个条件对应两个样式类{{classSwitch}}
+</div>
+
+<br>
+
+<div [class.bxg]="!classSwitch">
+  [class.样式类] 进行绑定{{classSwitch}}
+</div>
