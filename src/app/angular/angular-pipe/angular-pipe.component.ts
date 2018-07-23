@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Sanitizer } from '@angular/core';
 
 @Component({
   selector: 'app-angular-pipe',
@@ -42,14 +42,17 @@ export class AngularPipeComponent implements OnInit {
     oc.a = '4';       //c 改变  a 也改变
     console.log('改变c之后的oa：' + JSON.stringify(oa));
 
-
+    //字符串不需要 深度 copy
     const sa ='aaaa';
     let sb = JSON.parse(JSON.stringify(sa)); 
     sb = 'bbbbb';
     console.log('改变b之后的sa：'+ sa);
+    console.log('改变b之后的sb：'+ sb);
+    
     let sc = sa;
     sc = 'ccccc';
-    console.log(sc);
+    console.log('改变c之后的sa：'+ sa);
+    console.log('改变c之后的sc：'+ sc);
 
   }
 
