@@ -35,14 +35,21 @@ export class AngularPipeComponent implements OnInit {
     };
 
     const ob = JSON.parse(JSON.stringify(oa));   //可以用来   深度 copy
-
-    const oc = oa;
     ob.a = '3';
     console.log('改变b之后的oa：' + JSON.stringify(oa));
+
+    const oc = oa;
     oc.a = '4';       //c 改变  a 也改变
     console.log('改变c之后的oa：' + JSON.stringify(oa));
 
 
+    const sa ='aaaa';
+    let sb = JSON.parse(JSON.stringify(sa)); 
+    sb = 'bbbbb';
+    console.log('改变b之后的sa：'+ sa);
+    let sc = sa;
+    sc = 'ccccc';
+    console.log(sc);
 
   }
 
