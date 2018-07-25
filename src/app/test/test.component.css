@@ -1,4 +1,4 @@
-#wrap{
+#wrap,#wrap1{
   width: 100%;
   min-height: 500px;
   border: 1px solid red;
@@ -58,10 +58,210 @@
 }
 .icon-down{
   background: url("../../images/icons/RightArrow.png") no-repeat 0 60px;
-  background-size: 10px;
+  background-size: 20px;
 }
 .icon-right{
   background: url("../../images/icons/RightArrow.png") no-repeat 0 60px;
   background-size: 10px;
 }
+.icon-close{
+  background: url("../../images/icons/collapse.png") no-repeat 0 0;
+  background-size: 20px;
+}
+.icon-open{
+  background: url("../../images/icons/expand.png") no-repeat 0 0;
+  background-size: 10px;
+}
 
+/*//*
+ */
+i{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -20px;
+  top: 30px;
+  cursor: pointer;
+}
+.box{
+  width: 100%;
+  height: 100px;
+  /*border: 1px solid cadetblue;*/
+  position: relative;
+}
+.f:before{
+  content:'';
+  width: 10px;
+  height: 50px;
+  border-left: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: 50px;
+}
+.box-2{
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  padding-left: 20px;
+  /*border: 1px solid cadetblue;*/
+  position: relative;
+}
+.s:before, .sc:before{
+  content:'';
+  width: 10px;
+  height: 100%;
+  border-left: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: 0;
+}
+.s:after{
+  content: '';
+  width: 30px;
+  height: 2px;
+  border-left: 1px solid green;
+  border-bottom: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: 49px;
+}
+.l:before{
+  content: '';
+  width: 30px;
+  height: 50px;
+  border-left: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: 0;
+}
+.l:after{
+  content: '';
+  width: 30px;
+  height: 1px;
+  border-bottom: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: 49px;
+
+
+}
+
+.b{
+  width: 15%;
+  height: 100px;
+  background-color: bisque;
+  float: left;
+  border-bottom: 1px solid #fff;
+}
+.b-c{
+  width: calc(85% / 7);
+  height: 100px;
+  background-color: burlywood;
+  float: left;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+.box-2 > div{
+  width: calc((85% + 17px) / 7);
+}
+.box-2 > div.b{
+  width: calc(15% - 17px);
+}
+.box-2 > i{
+  left: 0;
+}
+.box-3{
+  width: 100% !important;
+  height: 100px;
+  padding-left: 20px;
+  /*border: 1px solid cadetblue;*/
+  position: relative;
+  clear: left;
+}
+
+.box-3 > div{
+  width: calc((85% + 34px) / 7);
+}
+.box-3 > div:first-child{
+  width: calc(15% - 34px);
+}
+.l{
+  clear: left;
+}
+/*a 表示第三级的第一个  暂时不用*/
+.a:before{
+  content: '';
+  width: 30px;
+  height: 150px;
+  border-left: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: -50px;
+}
+.a:after{
+  content: '';
+  width: 30px;
+  height: 1px;
+  border-bottom: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: 49px;
+}
+/*sc 第二级下面有子集需要用到的样式表名称*/
+.sc:after, .lc:after{
+  content: '';
+  width: 10px;
+  height: 2px;
+  border-left: 1px solid green;
+  border-bottom: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: 38px;
+}
+/*aa 第三级的竖线专用样式*/
+.aa:before{
+  content: '';
+  width: 30px;
+  height: 100px;
+  border-left: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: -50px;
+}
+.aa:after{
+  content: '';
+  width: 30px;
+  height: 1px;
+  border-bottom: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: 49px;
+}
+/*lc 表示最后一级但是还有下一级*/
+.lc:before{
+  content: '';
+  width: 30px;
+  height: 40px;
+  border-left: 1px solid green;
+  position: absolute;
+  left: -10px;
+  top: 0;
+}
+
+
+/*
+  box: 第一级
+  box-2: 第二级
+  box-3: 第三级
+
+  b:   每一行的第一个盒子
+  b-c: 第一个盒子后面的盒子
+
+  f:  第一级
+  sc: 第二级并且有子集
+  s:  第二级没有子集
+  aa: 第三级
+  lc: 最后一级 并且有下一级
+  l:  最后一级 没有下一级
+*/
