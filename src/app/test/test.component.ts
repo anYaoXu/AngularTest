@@ -19,6 +19,11 @@ export class TestComponent implements OnInit {
     {"name": "Jane", "Average": 18, "High": 92, "DtmStamp": 1358226060000}
   ];
 
+  public array = [
+    {a1: '1'},
+    {a1: '2'}
+  ];
+
   public groupByList;
 
   public mytitle = "title信息";
@@ -41,6 +46,13 @@ export class TestComponent implements OnInit {
     });
     console.log(this.groupByList);
     this.childFilter.childRun();
+    console.log(this.array);
+    this.array.forEach((item) => {
+      console.log(item);
+    });
+    //find 数组
+    const obj = this.array.find((p) => p.a1 === '1');
+    console.log("数组find=" + obj);
   }
 
   private groupBy(array, f) {
@@ -54,17 +66,17 @@ export class TestComponent implements OnInit {
     const a = [];
     console.log(groups);   // 此数组中 是 分组后的list 前面带有key
     // Object.keys(groups)是取出groups对象中的所有key，然后遍历一个个key组成的新数组
-   /* Object.keys(groups).map(function(group){
-      debugger;
-      console.log(group);
-      a.push({
-        name: group,
-        list: groups[group] //后面的数组   在a 这里可以随意拼装数据
-      });
-      return groups[group];
-    });
-    console.log(a);
-    return groups;*/
+    /* Object.keys(groups).map(function(group){
+       debugger;
+       console.log(group);
+       a.push({
+         name: group,
+         list: groups[group] //后面的数组   在a 这里可以随意拼装数据
+       });
+       return groups[group];
+     });
+     console.log(a);
+     return groups;*/
     return Object.keys(groups).map(function (group) {
       a.push({
         name: group,
