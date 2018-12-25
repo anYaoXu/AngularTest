@@ -93,6 +93,7 @@ export class TestComponent implements OnInit {
 
   public parentDataChange() {
     this.mytitle = "数据改变了";
+
     this.myObj = {
       a: '2',
       b: '3'
