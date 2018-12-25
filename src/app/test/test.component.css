@@ -1,24 +1,26 @@
-#wrap,#wrap1,#wrap2{
+#wrap,
+#wrap1,
+#wrap2 {
   width: 100%;
   min-height: 500px;
   border: 1px solid red;
   padding-left: 50px;
 }
-.group>div{
+.group > div {
   width: 200px;
   min-height: 100px;
   /*background-color: cadetblue;*/
   border: 1px solid cadetblue;
 }
-.children{
+.children {
   margin-left: 20px;
 }
-.group{
+.group {
   padding-left: 10px;
   position: relative;
   padding-top: 20px;
 }
-.first::before{
+.first::before {
   content: '';
   width: 10px;
   height: calc(100% - 50px - 20px);
@@ -28,7 +30,7 @@
   left: 0;
   top: 70px;
 }
-.center::before{
+.center::before {
   content: '';
   width: 10px;
   height: 100%;
@@ -37,7 +39,7 @@
   top: 0;
   border-left: 1px solid green;
 }
-.center::after{
+.center::after {
   content: '';
   width: 10px;
   height: 1px;
@@ -46,8 +48,8 @@
   top: 70px;
   border-top: 1px solid green;
 }
-.last::before{
-  content:'';
+.last::before {
+  content: '';
   width: 10px;
   height: 70px;
   border-left: 1px solid green;
@@ -56,26 +58,26 @@
   left: 0;
   top: 0;
 }
-.icon-down{
-  background: url("../../images/icons/RightArrow.png") no-repeat 0 60px;
+.icon-down {
+  background: url('../../images/icons/RightArrow.png') no-repeat 0 60px;
   background-size: 20px;
 }
-.icon-right{
-  background: url("../../images/icons/RightArrow.png") no-repeat 0 60px;
+.icon-right {
+  background: url('../../images/icons/RightArrow.png') no-repeat 0 60px;
   background-size: 10px;
 }
-.icon-close{
-  background: url("../../images/icons/collapse.png") no-repeat 0 0;
+.icon-close {
+  background: url('../../images/icons/collapse.png') no-repeat 0 0;
   background-size: 20px;
 }
-.icon-open{
-  background: url("../../images/icons/expand.png") no-repeat 0 0;
+.icon-open {
+  background: url('../../images/icons/expand.png') no-repeat 0 0;
   background-size: 10px;
 }
 
 /*//*
  */
-i{
+i {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -84,14 +86,14 @@ i{
   top: 30px;
   cursor: pointer;
 }
-.box{
+.box {
   width: 100%;
   height: 100px;
   /*border: 1px solid cadetblue;*/
   position: relative;
 }
-.f:before{
-  content:'';
+.f:before {
+  content: '';
   width: 10px;
   height: 50px;
   border-left: 1px solid green;
@@ -99,7 +101,7 @@ i{
   left: -10px;
   top: 50px;
 }
-.box-2{
+.box-2 {
   width: 100%;
   min-height: 100px;
   height: auto;
@@ -107,8 +109,9 @@ i{
   /*border: 1px solid cadetblue;*/
   position: relative;
 }
-.s:before, .sc:before{
-  content:'';
+.s:before,
+.sc:before {
+  content: '';
   width: 10px;
   height: 100%;
   border-left: 1px solid green;
@@ -116,7 +119,7 @@ i{
   left: -10px;
   top: 0;
 }
-.s:after{
+.s:after {
   content: '';
   width: 30px;
   height: 2px;
@@ -126,7 +129,7 @@ i{
   left: -10px;
   top: 49px;
 }
-.l:before{
+.l:before {
   content: '';
   width: 30px;
   height: 50px;
@@ -135,7 +138,7 @@ i{
   left: -10px;
   top: 0;
 }
-.l:after{
+.l:after {
   content: '';
   width: 30px;
   height: 1px;
@@ -143,18 +146,16 @@ i{
   position: absolute;
   left: -10px;
   top: 49px;
-
-
 }
 
-.b{
+.b {
   width: 15%;
   height: 100px;
   background-color: bisque;
   float: left;
   border-bottom: 1px solid #fff;
 }
-.b-c{
+.b-c {
   width: calc(85% / 7);
   height: 100px;
   background-color: burlywood;
@@ -162,16 +163,16 @@ i{
   border-bottom: 1px solid #fff;
   border-left: 1px solid #fff;
 }
-.box-2 > div{
+.box-2 > div {
   width: calc((85% + 17px) / 7);
 }
-.box-2 > div.b{
+.box-2 > div.b {
   width: calc(15% - 17px);
 }
-.box-2 > i{
+.box-2 > i {
   left: 0;
 }
-.box-3{
+.box-3 {
   width: 100% !important;
   height: 100px;
   padding-left: 20px;
@@ -180,17 +181,17 @@ i{
   clear: left;
 }
 
-.box-3 > div{
+.box-3 > div {
   width: calc((85% + 34px) / 7);
 }
-.box-3 > div:first-child{
+.box-3 > div:first-child {
   width: calc(15% - 34px);
 }
-.l{
+.l {
   clear: left;
 }
 /*a 表示第三级的第一个  暂时不用*/
-.a:before{
+.a:before {
   content: '';
   width: 30px;
   height: 150px;
@@ -199,7 +200,7 @@ i{
   left: -10px;
   top: -50px;
 }
-.a:after{
+.a:after {
   content: '';
   width: 30px;
   height: 1px;
@@ -209,7 +210,8 @@ i{
   top: 49px;
 }
 /*sc 第二级下面有子集需要用到的样式表名称*/
-.sc:after, .lc:after{
+.sc:after,
+.lc:after {
   content: '';
   width: 10px;
   height: 2px;
@@ -220,7 +222,7 @@ i{
   top: 38px;
 }
 /*aa 第三级的竖线专用样式*/
-.aa:before{
+.aa:before {
   content: '';
   width: 30px;
   height: 100px;
@@ -229,7 +231,7 @@ i{
   left: -10px;
   top: -50px;
 }
-.aa:after{
+.aa:after {
   content: '';
   width: 30px;
   height: 1px;
@@ -239,7 +241,7 @@ i{
   top: 49px;
 }
 /*lc 表示最后一级但是还有下一级*/
-.lc:before{
+.lc:before {
   content: '';
   width: 30px;
   height: 40px;
@@ -248,7 +250,6 @@ i{
   left: -10px;
   top: 0;
 }
-
 
 /*
   box: 第一级
