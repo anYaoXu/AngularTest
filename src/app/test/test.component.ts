@@ -102,4 +102,5 @@ export class TestComponent implements OnInit {
     this.isShowTree = value;
     console.log(this.isShowTree);
   }
+  public switchOpen() {}
 }

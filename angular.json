@@ -8,7 +8,11 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -22,7 +26,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/ngx-ui-switch/ui-switch.component.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/sassStyle.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

@@ -2,15 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sass-a',
-  templateUrl: './sassA.html'
+  templateUrl: './sassA.html',
+  styleUrls: ['./sassA.component.scss', './sassA.component.css']
 })
 export class SassAComponent implements OnInit {
+  constructor() {}
 
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
