@@ -7,6 +7,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class TestComponent implements OnInit {
   @ViewChild('globalFilter') public childFilter: any;
+  public isShowTree = false;
   //js 分组方法
   list = [
     { name: 'John', Average: 15, High: 10, DtmStamp: 1358226000000 },
@@ -96,8 +97,9 @@ export class TestComponent implements OnInit {
       b: '3'
     };
   }
-
-  public switchOpen() {
-    this.isFirstChildrenShow = !this.isFirstChildrenShow;
+  public switchValueChange(value) {
+    console.log('change', value);
+    this.isShowTree = value;
+    console.log(this.isShowTree);
   }
 }

@@ -1,3 +1,9 @@
+<app-common-switch
+  [size]="'small'"
+  [checked]="isShowTree"
+  (valueChangeEvent)="switchValueChange($event)"
+></app-common-switch>
+
 <h2>js group by</h2>
 <div *ngFor="let item of groupByList">
   <ul>
@@ -15,7 +21,7 @@
 
 <button (click)="switchOpen()">全部展开</button>{{ isFirstChildrenShow }}
 
-<div id="wrap">
+<div id="wrap" *ngIf="isShowTree">
   <div
     class="group first"
     [ngClass]="isFirstChildrenShow ? 'icon-down' : 'icon-right'"
@@ -79,7 +85,7 @@
   </div>
 </div>
 
-<div id="wrap1">
+<div id="wrap1" *ngIf="isShowTree">
   <div class="box f">
     <i class="icon-close"></i>
     <div class="b"></div>
