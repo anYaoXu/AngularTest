@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
-import {EchartsComponent} from './echarts/echarts.component';
-import {NgxBootstrapComponent} from './ngxBootstrap/ngxBootstrap.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { EchartsComponent } from './echarts/echarts.component';
+import { NgxBootstrapComponent } from './ngxBootstrap/ngxBootstrap.component';
 import { TestComponent } from './test/test.component';
 
 /*oadChildren是延迟加载子模块,这对于加载页面的性能有很好的提升。
@@ -14,17 +14,20 @@ const routes: Routes = [
     loadChildren: './sass/sassHome.module#SassHomeModule'
   },
   {
-    path: 'echarts', component: EchartsComponent
+    path: 'echarts/:id',
+    component: EchartsComponent
   },
   {
-    path: 'ngxBootstrap', component: NgxBootstrapComponent
+    path: 'ngxBootstrap',
+    component: NgxBootstrapComponent
   },
   {
-    path: 'test', component: TestComponent
+    path: 'test',
+    component: TestComponent
   },
   {
     path: 'angular',
-    loadChildren: './angular/angular.module#AngularaOwnModule',
+    loadChildren: './angular/angular.module#AngularaOwnModule'
   }
 ];
 
@@ -33,5 +36,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

@@ -1,12 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="nav">
   <h1>
-    {{ title }} <a [routerLink]="['/echarts']">echarts</a>
-    <a [routerLink]="['/test']">test</a>
+    {{ title }} <br />
+    <a [routerLink]="['/echarts', '1']" [queryParams]="{ id: 3 }">echarts</a>
+    <a (click)="toRoute()">test</a>
     <a [routerLink]="['/ngxBootstrap']">ngxBootstrap</a>
     <a [routerLink]="['/angular']">angular</a>
     <a [routerLink]="['/sassHome']">sass</a>
-    {{ nowRoute }}
   </h1>
   <router-outlet></router-outlet>
 </div>

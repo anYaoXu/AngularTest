@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Http } from '@angular/http';
 import { NgxEchartsService } from 'ngx-echarts';
 import { GlobalService } from '../common/global.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-echarts',
@@ -41,7 +42,8 @@ export class EchartsComponent implements OnInit {
   constructor(
     public http: Http,
     private es: NgxEchartsService,
-    private globalService: GlobalService
+    private globalService: GlobalService,
+    private activeRoute: ActivatedRoute
   ) {
     setTimeout(() => {
       this.showloading = false;
@@ -141,6 +143,9 @@ export class EchartsComponent implements OnInit {
           }
         }
       };
+    });
+    this.activeRoute.queryParams.subscribe(params => {
+      console.log('-----得到路由传过来参数-----', params['id']);
     });
   }
 

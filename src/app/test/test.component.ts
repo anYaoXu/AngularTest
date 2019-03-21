@@ -1,3 +1,4 @@
+import { Subject } from 'rxjs';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { GlobalService } from '../common/global.service';
 @Component({
@@ -34,12 +35,13 @@ export class TestComponent implements OnInit {
   };
 
   constructor(protected globalService: GlobalService) {
-    this.globalService.configObservable.subscribe(value => {
-      console.log('-----------------------------------------------', value);
-    });
+    // this.globalService.configObservable.subscribe(value => {
+    //   console.log('-----------------------------------------------', value);
+    // });
   }
 
   ngOnInit() {
+    this.globalService.emitConfig('test');
     this.groupByList = this.groupBy(this.list, function(item) {
       return [item.name];
     });
