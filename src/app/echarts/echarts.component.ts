@@ -2,6 +2,7 @@ import { NgxBootstrapComponent } from './../ngxBootstrap/ngxBootstrap.component'
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Http } from '@angular/http';
 import { NgxEchartsService } from 'ngx-echarts';
+import { GlobalService } from '../common/global.service';
 
 @Component({
   selector: 'app-echarts',
@@ -37,10 +38,15 @@ export class EchartsComponent implements OnInit {
     { name: '湖州市', value: [107.615944, 27.479744, 2], img: 's-success.png' }
   ];
 
-  constructor(public http: Http, private es: NgxEchartsService) {
+  constructor(
+    public http: Http,
+    private es: NgxEchartsService,
+    private globalService: GlobalService
+  ) {
     setTimeout(() => {
       this.showloading = false;
     }, 3000);
+    this.globalService.emitConfig('echarts');
   }
 
   ngOnInit() {

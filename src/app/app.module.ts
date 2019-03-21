@@ -1,3 +1,4 @@
+import { GlobalService } from './common/global.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
@@ -19,7 +20,7 @@ import { TestModule } from './test/test.module';
     NgxBootstrapModule,
     TestModule
   ],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

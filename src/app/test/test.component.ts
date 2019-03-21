@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-
+import { GlobalService } from '../common/global.service';
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -33,7 +33,11 @@ export class TestComponent implements OnInit {
     b: '2'
   };
 
-  constructor() {}
+  constructor(protected globalService: GlobalService) {
+    this.globalService.configObservable.subscribe(value => {
+      console.log('-----------------------------------------------', value);
+    });
+  }
 
   ngOnInit() {
     this.groupByList = this.groupBy(this.list, function(item) {
